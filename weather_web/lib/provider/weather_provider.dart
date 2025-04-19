@@ -30,24 +30,17 @@ class WeatherProvider extends ChangeNotifier{
   }
 
   Future<void> initialFromCache() async{
-    // if(_isInitilized) return;
-    print('enter init weather');
     final prefs = await SharedPreferences.getInstance();
     final jsonString = prefs.getString('weather_cached');
     
     if(jsonString != null){
-      print("have data");
       final jsonMap = jsonDecode(jsonString);
       final savedAt = DateTime.parse(jsonMap['savedAt']);
       final now = DateTime.now();
 
       if(savedAt.year == now.year && savedAt.month == now.month && savedAt.day == now.day){
-        print('same date');
         List<dynamic> data = jsonMap['forecast'];
-        print(data.length);
         List<Weather> forecast = data.map((item) => Weather.fromPrefJson(item as Map<String, dynamic>)).toList();
-        // print(forecast);
-        // List<Weather> forecast = data.map((item) => Weather.fromJson(item as Map<String, dynamic>, jsonMap['city'])).toList();
         Weather currentWeather = Weather.fromPrefJson(jsonMap['currentWeather']);
         this.currentWeather = currentWeather;
         this.forecast = forecast;
@@ -56,7 +49,6 @@ class WeatherProvider extends ChangeNotifier{
         
       }
     }else{
-      print("no data");
     }
   }
 }

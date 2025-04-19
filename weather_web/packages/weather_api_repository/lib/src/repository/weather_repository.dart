@@ -3,13 +3,9 @@ import 'package:weather_api_repository/src/model/model.dart';
 
 class WeatherRepository{
   final Dio dio = Dio();
-  // final String api_url = dotenv.env['WEATHER_API_URL'] ?? "https://api.weatherapi.com/v1";
-  // final String api_key = dotenv.env['API_KEY'] ?? "api_key";
   late String api_url;
   late String api_key;
   WeatherRepository() {
-    // api_url = env?['WEATHER_API_URL'];
-    // api_key = env?['API_KEY'];
     api_url = "https://api.weatherapi.com/v1";
     api_key = "a1a63b1e03bf4e23bae110646251704";
     

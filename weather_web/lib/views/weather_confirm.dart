@@ -1,4 +1,4 @@
-import 'package:dio/dio.dart';
+import 'package:email_repository/email_repository.dart';
 import 'package:flutter/material.dart';
 
 class WeatherConfirm extends StatefulWidget{
@@ -9,16 +9,17 @@ class WeatherConfirm extends StatefulWidget{
 
 class _WeatherConfirmState extends State<WeatherConfirm>{
   String? status;
-  Dio dio = Dio();
+  // Dio dio = Dio();
+  late EmailRepository _emailRepository;
 
   @override
   void initState() {
     super.initState();
+    _emailRepository = EmailRepository();
     _handleConfirm();
   }
   @override
   Widget build(BuildContext context) {
-    print("enter confirm screen");
     return Scaffold(
       body: Center(
         child: status == null 
@@ -37,23 +38,8 @@ class _WeatherConfirmState extends State<WeatherConfirm>{
     if(tokenParam == null){
       setState(() => status = 'can not find verify token');
     }
-    print(tokenParam);
-    try{
-      final response = await dio.post(
-        'http://localhost:3000/api/confirm',
-        data: {
-          "token": tokenParam,
-        } 
-      );
-      if(response.statusCode == 200){
-        setState(() => status = "verify successful");
-      }else {
-        setState(() => status = "verify failed");
-      }
-    }catch(error){
-      print(error);
-      setState(() => status = "network or system error");
-    }
+    String resp = await _emailRepository.verifyEmail(tokenParam!);
+    setState(() => status = resp);
   }
   
 }

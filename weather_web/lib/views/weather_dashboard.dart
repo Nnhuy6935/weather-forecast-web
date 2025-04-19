@@ -9,7 +9,7 @@ import 'package:weather_web/components/wide_layout.dart';
 import 'package:weather_web/provider/weather_provider.dart';
 
 class WeatherDashboard extends StatefulWidget{
-  const WeatherDashboard({Key? key}) : super(key: key);
+  const WeatherDashboard({super.key});
   @override
   State<StatefulWidget> createState() => _WeatherDashboardState();
  }
@@ -22,12 +22,10 @@ class _WeatherDashboardState extends State<WeatherDashboard>{
     Future.microtask(() {
       context.read<WeatherProvider>().initialFromCache();
     });
-    print('out of init weather');
   }
 
   @override
   Widget build(BuildContext context) {
-    print("enter weather dashboard");
     return Scaffold(
       body: LayoutBuilder(
         builder: (context, constraints){
@@ -72,12 +70,10 @@ class _WeatherDashboardState extends State<WeatherDashboard>{
 
   Future<void> initWeather(WeatherProvider provider) async{
     if(provider.getIsInitialized()) return;
-    print('enter init weather');
     final prefs = await SharedPreferences.getInstance();
     final jsonString = prefs.getString('weather_cached');
     
     if(jsonString != null){
-      print("have data");
       final jsonMap = jsonDecode(jsonString);
       final savedAt = DateTime.parse(jsonMap['savedAt']);
       final now = DateTime.now();
@@ -92,7 +88,6 @@ class _WeatherDashboardState extends State<WeatherDashboard>{
         
       }
     }else{
-      print("no data");
     }
   }
 }

@@ -127,10 +127,9 @@ class _RegisterState extends State<RegisterScreen>{
                             )
                           );
                         }else{
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(response)));
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('${response}. Please check email to verify.')));
                         }
                       }catch(error){
-                        print(error);
                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(error.toString())));
                       }
                       updateLoadingState();

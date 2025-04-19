@@ -24,21 +24,18 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state){
-        print('${Uri.base.path} ==> DASHBOARD');
         return const WeatherDashboard();
       }
     ),
     GoRoute(
       path: '/confirm',
       builder: (BuildContext context, GoRouterState state){
-        print('${Uri.base.path} ==> CONFIRM');
         return const WeatherConfirm();
       }
     ),
     GoRoute(
       path: '/register',
       builder: (BuildContext context, GoRouterState state){
-        print('${Uri.base.path} ==> REGISTER');
         return const RegisterScreen();
       }
     ),
