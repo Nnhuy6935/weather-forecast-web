@@ -8,6 +8,11 @@
   ```sh
   flutter run
   ```
+## Technical 
+- ``Shared Preferences`` : save data and show again when user first access to website
+- ``Dio`` : manage HTTP request  
+- ``go_router`` : web navigation
+
 
 ## Web demo 
 ![image](https://github.com/user-attachments/assets/2e5801ce-31f6-491d-9947-437b331dbda8)
