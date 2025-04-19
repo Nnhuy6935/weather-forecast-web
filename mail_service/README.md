@@ -34,3 +34,6 @@ open http://localhost:3000
 
 - WEATHER_API_URL=https://api.weatherapi.com/v1
 - WEATHER_API_KEY=[api-key]
+
+## Deploy API 
+- api link: https://weather-forecast-web-zob7.onrender.com
