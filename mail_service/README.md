@@ -19,10 +19,14 @@ To run:
 bun run dev
 ```
 
-open http://localhost:3000
+## Technical 
+- ``hono`` + ``bun``
+- ``drizzle`` : manage neon database
+- ``node_cron``: schedule jobs ( send daily notification to register email)
+- ``nodemailer`` : send email
 
 ## Environment variables 
-- PORT=3000
+- PORT=3007
 - DATABASE_URL=postgresql://[database-owner]:[database-password]@[database-host]/[database-name]?sslmode=require
 
 - EMAIL_HOST=[mail-host]
