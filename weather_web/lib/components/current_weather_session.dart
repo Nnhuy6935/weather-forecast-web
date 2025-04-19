@@ -3,9 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:weather_web/provider/weather_provider.dart';
 
 class CurrentWeatherSession extends StatelessWidget{
-  // final Weather weather;
-  // const CurrentWeatherSession({required this.weather});
-  const CurrentWeatherSession();
+  const CurrentWeatherSession({super.key});
   @override
   Widget build(BuildContext context){
     WeatherProvider weatherProvider = Provider.of(context);
