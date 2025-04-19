@@ -1,16 +1,17 @@
 # weather_web
 
-A new Flutter project.
+- to build web
+  ```sh
+  flutter build web
+  ```
+- to run web
+  ```sh
+  flutter run
+  ```
 
-## Getting Started
+## Web demo 
+![image](https://github.com/user-attachments/assets/2e5801ce-31f6-491d-9947-437b331dbda8)
+![image](https://github.com/user-attachments/assets/ba9b9c36-5146-46d8-b356-edfc369d0b66)
+![image](https://github.com/user-attachments/assets/50ac609f-d80a-4bff-88ab-338c930f6943)
+![image](https://github.com/user-attachments/assets/8b2c7b14-eeed-4bb6-870a-3b08e488ede2)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
