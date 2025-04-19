@@ -27,4 +27,6 @@
   ```sh
   firebase deploy
   ```
+
+- deploy link: https://webdatabase-702dd.web.app
   
