@@ -41,3 +41,11 @@ bun run dev
 
 ## Deploy API 
 - api link: https://weather-forecast-web-zob7.onrender.com
+
+## Send Mail demo 
+### Verification email 
+![image](https://github.com/user-attachments/assets/49bd86d0-2a66-4df9-9281-399e37e9c897)
+
+### Daily notification email 
+![image](https://github.com/user-attachments/assets/a1ad27e0-4471-4004-a46e-d693020c138e)
+
